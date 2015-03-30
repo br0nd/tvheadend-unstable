@@ -19,7 +19,7 @@ RUN usermod -u 99 nobody && \
 RUN apt-get update -qq && \
 apt-get install -qy build-essential pkg-config libssl-dev git bzip2 wget libavahi-client-dev zlib1g-dev libcurl4-gnutls-dev python liburiparser1 liburiparser-dev \
 libhdhomerun-dev && \
-cd /tmp && git clone https://github.com/tvheadend/tvheadend.git && cd tvheadend && git checkout f5c8e4ce && ./configure --enable-libffmpeg_static && make && make install && \
+cd /tmp && git clone https://github.com/tvheadend/tvheadend.git && cd tvheadend && git checkout e4cdd3ca0fd84161af2c2a31f2ce198a12545baa && ./configure --enable-libffmpeg_static && make && make install && \
 rm -r /tmp/tvheadend && apt-get purge -qq build-essential pkg-config git
 
 # Clean up APT when done.
